@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/dev",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && babel server --source-maps -d dist",
+    "production": "npm run build && node bin/production"
+
+
   },
   "author": "LeChristopher J. Blackwell <CodeBlackwell@gmail.com>",
   "license": "ISC",
